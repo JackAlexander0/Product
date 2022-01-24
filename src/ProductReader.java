@@ -48,8 +48,9 @@ public class ProductReader {
                     rec = reader.readLine();
                     line++;
                     // echo to screen
-                    rec = rec.replaceAll(",","");
-                    String[] arrayRec = rec.split(" ", 10);
+                    rec = rec.replaceAll(" ","");
+                    String[] arrayRec = rec.split(",", 10);
+                    Product y = new Product (arrayRec[0], arrayRec[1], arrayRec[2], Double.valueOf(arrayRec[3]));
                     System.out.printf("%-11s",arrayRec[0]);
                     System.out.printf("%-14s",arrayRec[1]);
                     System.out.printf("%-25s",arrayRec[2]);
